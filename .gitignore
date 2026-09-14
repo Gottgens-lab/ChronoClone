@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.ipynb_checkpoints/
+.env
+.venv/
+*.DS_Store
+*.log
+in_silico/simulated_data/

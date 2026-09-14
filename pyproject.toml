@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chronoclone"
+version = "0.1.0"
+description = "Clonal trajectory classification for time-resolved multi-omics data"
+authors = [{name = "hiro"}]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+keywords = ["single-cell", "clonal analysis", "trajectory", "LARRY", "scRNA-seq",
+            "multiome", "proteomics", "imaging", "bioinformatics"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    "scanpy>=1.9",
+    "anndata>=0.9",
+    "pandas>=1.5",
+    "numpy>=1.23",
+    "scipy>=1.9",
+    "scikit-learn>=1.1",
+    "matplotlib>=3.6",
+    "seaborn>=0.12",
+    "networkx>=3.0",
+    "harmonypy>=0.0.9",
+    "umap-learn>=0.5",
+    "leidenalg>=0.9",
+    "igraph>=0.10",
+    "statsmodels>=0.13",
+    "pynndescent>=0.5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov", "black", "flake8"]
+docs = ["sphinx", "sphinx-rtd-theme"]
+
+[project.urls]
+Homepage = "https://github.com/hiromitsuhari/ChronoClone"
+"Bug Tracker" = "https://github.com/hiromitsuhari/ChronoClone/issues"
+
+[tool.setuptools.packages.find]
+include = ["chronoclone*"]

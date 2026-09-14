@@ -1,0 +1,28 @@
+name: chronoclone
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python>=3.8
+  - pip
+  # Core scientific
+  - numpy>=1.23
+  - pandas>=1.5
+  - scipy>=1.9
+  - matplotlib>=3.6
+  - seaborn>=0.12
+  - networkx>=3.0
+  - statsmodels>=0.13
+  # Single-cell specific (better via conda-forge)
+  - leidenalg>=0.9
+  - python-igraph>=0.10
+  - umap-learn>=0.5
+  - pynndescent>=0.5
+  - scikit-learn>=1.1
+  # Install via pip (not reliably on conda)
+  - pip:
+    - scanpy>=1.9
+    - anndata>=0.9
+    - harmonypy>=0.0.9
+    - chronoclone @ git+https://github.com/hiromitsuhari/ChronoClone.git

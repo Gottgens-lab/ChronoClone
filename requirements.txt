@@ -1,0 +1,15 @@
+scanpy>=1.9
+anndata>=0.9
+pandas>=1.5
+numpy>=1.23
+scipy>=1.9
+scikit-learn>=1.1
+matplotlib>=3.6
+seaborn>=0.12
+networkx>=3.0
+harmonypy>=0.0.9
+umap-learn>=0.5
+leidenalg>=0.9
+igraph>=0.10
+statsmodels>=0.13
+pynndescent>=0.5
