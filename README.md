@@ -36,6 +36,10 @@ The tutorial shows every step with visible results. See the [data description](e
 | `transfer_metaclone_labels` | Map clone labels back to individual cells. |
 | `plot_metaclone_density_umap` | Draw the days-by-metaclones density UMAP. |
 
+## Paper simulations and noise validation
+
+The [in silico benchmark](in_silico/README.md) contains the paper’s deterministic simulation, fixed-start Gaussian and redistribution noise, complete validation summaries, executed notebooks, and editable figures. Start there to reproduce the synthetic experiment.
+
 ## License and data
 
 Package code is [MIT licensed](LICENSE). The included Weinreb data retain their [source attribution and CC BY 4.0 terms](examples/weinreb/data/README.md). The [paper repository](https://github.com/hiromitsuhari/ChronoClone_paper) contains the manuscript materials.

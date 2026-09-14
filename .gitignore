@@ -10,3 +10,6 @@ build/
 *.DS_Store
 *.log
 in_silico/simulated_data/
+
+/in_silico/results/aggregate/native_method_noise_runs.csv.gz
+/in_silico/reproductions/
