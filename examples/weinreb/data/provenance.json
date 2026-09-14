@@ -989,7 +989,7 @@
   "author_workflow": {
     "historical_source_path": "project/figure2_weinreb/author_workflow_20260724/notebooks/0010_ChronoClone_Weinreb2020.ipynb",
     "historical_source_sha256": "6e8ac988969ac83c08e3d6be2c2dd2a434d81a81c5046349944f0f1aeb66df02",
-    "historical_source_role": "Identifies the retained source snapshot at intake. The supplied path has since been adapted; this hash does not describe its current contents.",
+    "historical_source_role": "Identifies the retained source snapshot at intake. The author notebook is preserved separately from this package tutorial.",
     "historical_identification_cells_zero_based": [
       21,
       23,
@@ -1021,5 +1021,6 @@
     },
     "package_execution_summary": "../results/example_summary.json",
     "note": "The tutorial identifies metaclones anew. The recorded partitions differ despite matching input metadata; the reason for that difference is unverified."
-  }
+  },
+  "additional_plot_inputs": "plot_inputs.json"
 }

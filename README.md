@@ -2,7 +2,7 @@
 
 ChronoClone identifies metaclones: groups of clones with similar cell-state trajectories over time. It builds clone-by-time features, combines clustering results across resolutions, and displays the resulting groups on a density UMAP.
 
-Start with the [tutorial](notebooks/chronoclone_tutorial.ipynb). It uses the included public Weinreb dataset and takes you from cell metadata to metaclone identification and visualization. The saved UMAP coordinates are included, so no expression-matrix download is needed.
+Start with the [tutorial](notebooks/chronoclone_tutorial.ipynb). It uses the included public Weinreb dataset and takes you from cell metadata to metaclone identification and visualization. The saved UMAP coordinates and compact Day-2 expression input are included, so no additional data download is needed. The notebook includes the annotation UMAPs, silhouette plots, consensus heatmap, clone counts, cell-state dynamics, marker dotplot, and density UMAP from the supplied workflow.
 
 ## Get started
 

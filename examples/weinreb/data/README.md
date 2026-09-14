@@ -22,3 +22,16 @@ Experimental data: Weinreb C, Rodriguez-Fraticelli A, Camargo F and Klein AM, [G
 Processed data: Mingze Gao (2024), [CLADES dataset, version 2](https://doi.org/10.6084/m9.figshare.27908142.v2), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). This extract retains that attribution and license, separately from the package's code license.
 
 Source hashes, extraction details and the brief context for historical versus current metaclone assignments are in [provenance.json](provenance.json).
+
+## Inputs for the original plots
+
+The tutorial also includes the original annotation views and Day-2 marker analysis. These use separate compact projections described in [plot_inputs.json](plot_inputs.json):
+
+| File | Contents | Size |
+|---|---|---:|
+| [weinreb_annotation_umap.csv.gz](weinreb_annotation_umap.csv.gz) | Full annotation cohort: cell IDs, working states, and saved float32 UMAP coordinates. Shape: 126,861 × 4. | 1,850,004 bytes |
+| [weinreb_day2_expression.h5ad](weinreb_day2_expression.h5ad) | All Day-2 cells in the retained cohort; all source genes and exact sparse log-expression values. Shape: 1,041 × 25,289. | 5,772,335 bytes |
+
+The full annotation cohort is used only for the opening UMAP views. The identification input remains the retained cohort in `weinreb_cells.csv.gz`. Day-2 expression is joined to the freshly computed metaclones by cell ID; no historical metaclone assignments are included in these inputs. The sparse expression projection preserves the original source dtype and all genes.
+
+The new inputs retain the experimental and processed-data attribution and license above. Their exact registered source hashes, field selection, category order, colors, and round-trip checks are in `plot_inputs.json`.

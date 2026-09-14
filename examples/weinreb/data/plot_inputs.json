@@ -1,0 +1,194 @@
+{
+  "annotation_umap": {
+    "file": "weinreb_annotation_umap.csv.gz",
+    "sha256": "6add60d69fc526725328069ac7b0d68ce953b2f4c71746278ce460efb9b19e70",
+    "bytes": 1850004,
+    "shape": [
+      126861,
+      4
+    ],
+    "columns": [
+      "cell_id",
+      "cell_type",
+      "UMAP1",
+      "UMAP2"
+    ],
+    "read_csv": {
+      "dtype": {
+        "cell_id": "string",
+        "cell_type": "string",
+        "UMAP1": "float32",
+        "UMAP2": "float32"
+      },
+      "keep_default_na": false
+    },
+    "category_order": [
+      "Baso",
+      "DC",
+      "Eos",
+      "Ery",
+      "Ly",
+      "Mast",
+      "Meg",
+      "Mono",
+      "Neu",
+      "early_prog_Neu",
+      "pDC",
+      "prog_1",
+      "prog_2",
+      "prog_3",
+      "prog_4",
+      "prog_Baso_Eos",
+      "prog_Baso_Meg_Ery_Mast",
+      "prog_DC_Mono",
+      "prog_Ly_pDC",
+      "prog_Meg_Ery",
+      "prog_Mono",
+      "prog_Neu"
+    ],
+    "category_ordered": false,
+    "palette_by_label": {
+      "Baso": "#023fa5",
+      "DC": "#7d87b9",
+      "Eos": "#bec1d4",
+      "Ery": "#d6bcc0",
+      "Ly": "#bb7784",
+      "Mast": "#8e063b",
+      "Meg": "#4a6fe3",
+      "Mono": "#8595e1",
+      "Neu": "#b5bbe3",
+      "early_prog_Neu": "#e6afb9",
+      "pDC": "#e07b91",
+      "prog_1": "#d33f6a",
+      "prog_2": "#11c638",
+      "prog_3": "#8dd593",
+      "prog_4": "#c6dec7",
+      "prog_Baso_Eos": "#ead3c6",
+      "prog_Baso_Meg_Ery_Mast": "#f0b98d",
+      "prog_DC_Mono": "#ef9708",
+      "prog_Ly_pDC": "#0fcfc0",
+      "prog_Meg_Ery": "#9cded6",
+      "prog_Mono": "#d5eae7",
+      "prog_Neu": "#f3e1eb"
+    },
+    "palette_choice": "Parent-object palette, exactly matching retained-object colors on all shared labels.",
+    "parent_palette_by_label": {
+      "Baso": "#023fa5",
+      "DC": "#7d87b9",
+      "Eos": "#bec1d4",
+      "Ery": "#d6bcc0",
+      "Ly": "#bb7784",
+      "Mast": "#8e063b",
+      "Meg": "#4a6fe3",
+      "Mono": "#8595e1",
+      "Neu": "#b5bbe3",
+      "early_prog_Neu": "#e6afb9",
+      "pDC": "#e07b91",
+      "prog_1": "#d33f6a",
+      "prog_2": "#11c638",
+      "prog_3": "#8dd593",
+      "prog_4": "#c6dec7",
+      "prog_Baso_Eos": "#ead3c6",
+      "prog_Baso_Meg_Ery_Mast": "#f0b98d",
+      "prog_DC_Mono": "#ef9708",
+      "prog_Ly_pDC": "#0fcfc0",
+      "prog_Meg_Ery": "#9cded6",
+      "prog_Mono": "#d5eae7",
+      "prog_Neu": "#f3e1eb"
+    },
+    "retained_palette_by_label": {
+      "Baso": "#023fa5",
+      "DC": "#7d87b9",
+      "Eos": "#bec1d4",
+      "Ery": "#d6bcc0",
+      "Ly": "#bb7784",
+      "Mast": "#8e063b",
+      "Meg": "#4a6fe3",
+      "Mono": "#8595e1",
+      "Neu": "#b5bbe3",
+      "early_prog_Neu": "#e6afb9",
+      "prog_1": "#d33f6a",
+      "prog_2": "#11c638",
+      "prog_3": "#8dd593",
+      "prog_4": "#c6dec7",
+      "prog_Baso_Eos": "#ead3c6",
+      "prog_Baso_Meg_Ery_Mast": "#f0b98d",
+      "prog_DC_Mono": "#ef9708",
+      "prog_Ly_pDC": "#0fcfc0",
+      "prog_Meg_Ery": "#9cded6",
+      "prog_Mono": "#d5eae7",
+      "prog_Neu": "#f3e1eb"
+    },
+    "palette_overlap_differences": [],
+    "labels_absent_from_retained_palette": [
+      "pDC"
+    ],
+    "source": {
+      "logical_path": "reference_inputs/weinreb/klein_paga.h5ad",
+      "sha256": "f36c521bae0c375ba5563ba59d0dfb6d018efbfe9a74e7e1917d6212758642b0",
+      "bytes": 3998970995
+    },
+    "cell_id_derivation": "Prefix the source observation index with cell_; exact alignment to the bundled cohort is verified.",
+    "projection_checks": {
+      "all_original_coordinates_float32_exact": true,
+      "all_original_annotation_labels_exact": true,
+      "bundled9714_coordinates_and_labels_exact": true
+    },
+    "palette_note": "The full parent-object palette matches the colors of the original saved annotation UMAP. Shared labels retain the same colors after filtering."
+  },
+  "day2_expression": {
+    "file": "weinreb_day2_expression.h5ad",
+    "sha256": "5c595c172071325aa9ef2d98691fdbb8959d6f510f928715b45b3c11ef454c81",
+    "bytes": 5772335,
+    "shape": [
+      1041,
+      25289
+    ],
+    "matrix_dtype": "float64",
+    "matrix_format": "csr",
+    "nonzero_values": 1752647,
+    "obs_columns": [
+      "day"
+    ],
+    "var_columns": [
+      "gene_symbol"
+    ],
+    "gene_names": {
+      "count": 25289,
+      "unique": true,
+      "sha256": "a84a6c5c6a00aaa8b641f8e97d45d6244119df3f37d43d13861a306ed0f87461"
+    },
+    "log1p": {},
+    "source_layer": "raw.X",
+    "source": {
+      "logical_path": "reference_inputs/weinreb/klein_metaclone.h5ad",
+      "sha256": "cd2b9e3c986c80c4c3394fb8ad9e6ef4cdf376ba88e94ba273e6a09e012ef099",
+      "bytes": 367848462
+    },
+    "selection": "All Day-2 cells in the registered9714-cell retained cohort, regardless of historical metaclone assignment.",
+    "projection_checks": {
+      "all_raw_genes_preserved": true,
+      "sparse_values_and_indices_exact": true,
+      "source_dtype_preserved": true,
+      "cell_order_preserved": true,
+      "historical_metaclone_labels_excluded": true
+    },
+    "analysis_note": "This input projection contains no fitted metaclone labels. The tutorial joins its newly calculated labels by observation ID before the marker analysis."
+  },
+  "scope": "Exact compact input projections for Weinreb annotation and Day-2 expression plots.",
+  "attribution": {
+    "experimental_dataset": {
+      "authors": "Weinreb C, Rodriguez-Fraticelli A, Camargo F, Klein AM",
+      "geo_series": "GSE140802",
+      "geo_sample": "GSM4185642",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE140802"
+    },
+    "processed_reference": "Gao, Mingze (2024). Unveiling clonal cell fate and differentiation dynamics: A hybrid NeuralODE-Gillespie approach. figshare. Dataset. https://doi.org/10.6084/m9.figshare.27908142.v2"
+  },
+  "partition_note": "Historical saved plots and newly identified tutorial metaclones are different recorded fits. These projections contain no historical metaclone assignments.",
+  "data_license": {
+    "identifier": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "basis": "Processed CLADES deposit license; retain attribution to the original experimental study and processed-data contributor."
+  }
+}
