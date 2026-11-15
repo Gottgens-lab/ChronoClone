@@ -3,13 +3,23 @@ Shared fixtures for ChronoClone tests.
 
 All fixtures use deterministic random seeds and construct minimal but
 synthetic data; no experimental dataset is loaded:
-  - 4 clones (BC00–BC03), condition SyntheticReference (reference)
-  - 4 clones (BC00–BC03), condition SyntheticA (comparison, no Day0)
-  - 4 clones (BC00–BC03), condition SyntheticB (comparison, no Day0)
-  - Only BC00–BC02 appear at Day0 as pure HSC/HSPC (valid start)
+  - 12 clones (BC00–BC11), condition SyntheticReference (reference)
+  - 12 clones (BC00–BC11), condition SyntheticA (comparison, no Day0)
+  - 12 clones (BC00–BC11), condition SyntheticB (comparison, no Day0)
+  - All clones except BC03 appear at Day0 as pure HSC/HSPC (valid start)
   - BC03 in control has a contaminated Day0 (CMP) -> should be filtered out
   - Synthetic comparison conditions have clones observed at varying time points
     (missing days are intentional test cases)
+  - Day0 cells are HSC/HSPC only, so Day0 has no CMP/MEP/GMP columns
+
+BC04–BC11 follow the same pattern as BC00–BC02. They give each fake control
+metaclone (MC0/MC1) 5-6 control clones, so compute_similarity_scores_multi
+has a control distribution (at least 2 clones with different scores) for
+both metaclones. With only BC00–BC02, MC1 had one control clone and was always
+dropped, and MC0 rested on two.
+
+Fixtures are session-scoped. Fixtures that build on other fixtures work on
+copies, so no test changes the data another test sees.
 """
 
 import numpy as np
@@ -22,6 +32,12 @@ CELL_TYPES = ['HSC', 'HSPC', 'CMP', 'MEP', 'GMP']
 DAYS_CTRL    = ['Day0', 'Day4', 'Day9', 'Day15']
 DAYS_COMPARISON = ['Day4', 'Day9', 'Day15']
 CONDITIONS   = ['SyntheticReference', 'SyntheticA', 'SyntheticB']
+VALID_CLONES = ['BC00', 'BC01', 'BC02'] + [f'BC{i:02d}' for i in range(4, 12)]
+# n_neighbors for compute_similarity_scores_multi in tests. scanpy counts the
+# clone itself, so with 2 a control clone scored against the control links only
+# to its own copy and every clone of a metaclone gets the same score (std 0,
+# so every metaclone is dropped from the z-scores).
+SCORING_N_NEIGHBORS = 5
 
 
 def _make_cells(clone_id, day, condition, cell_types, n_cells=4, seed=0):
@@ -43,8 +59,8 @@ def adata_full():
     """
     records = []
 
-    # --- Control: BC00-BC02 pure HSC/HSPC at Day0; BC03 contaminated ---
-    for clone in ['BC00', 'BC01', 'BC02']:
+    # --- Control: valid clones pure HSC/HSPC at Day0; BC03 contaminated ---
+    for clone in VALID_CLONES:
         records.append(_make_cells(clone, 0,  'SyntheticReference', ['HSC', 'HSPC'], seed=int(clone[2:])*10))
         records.append(_make_cells(clone, 4,  'SyntheticReference', CELL_TYPES,      seed=int(clone[2:])*10+1))
         records.append(_make_cells(clone, 9,  'SyntheticReference', CELL_TYPES,      seed=int(clone[2:])*10+2))
@@ -56,15 +72,15 @@ def adata_full():
     records.append(_make_cells('BC03', 9,  'SyntheticReference', CELL_TYPES,   seed=32))
     records.append(_make_cells('BC03', 15, 'SyntheticReference', CELL_TYPES,   seed=33))
 
-    # --- Synthetic comparison A: BC00-BC03, no Day0; BC03 only Day4 (missing Day9, Day15) ---
-    for clone in ['BC00', 'BC01', 'BC02']:
+    # --- Synthetic comparison A: no Day0; BC03 only Day4 (missing Day9, Day15) ---
+    for clone in VALID_CLONES:
         records.append(_make_cells(clone, 4,  'SyntheticA', CELL_TYPES, seed=int(clone[2:])*20))
         records.append(_make_cells(clone, 9,  'SyntheticA', CELL_TYPES, seed=int(clone[2:])*20+1))
         records.append(_make_cells(clone, 15, 'SyntheticA', CELL_TYPES, seed=int(clone[2:])*20+2))
     records.append(_make_cells('BC03', 4, 'SyntheticA', CELL_TYPES, seed=60))  # Day4 only
 
-    # --- Synthetic comparison B: BC00-BC03, no Day0; BC03 only Day4 ---
-    for clone in ['BC00', 'BC01', 'BC02']:
+    # --- Synthetic comparison B: no Day0; BC03 only Day4 ---
+    for clone in VALID_CLONES:
         records.append(_make_cells(clone, 4,  'SyntheticB', CELL_TYPES, seed=int(clone[2:])*30))
         records.append(_make_cells(clone, 9,  'SyntheticB', CELL_TYPES, seed=int(clone[2:])*30+1))
         records.append(_make_cells(clone, 15, 'SyntheticB', CELL_TYPES, seed=int(clone[2:])*30+2))
@@ -132,19 +148,20 @@ def normalized_table_synthetic_b(adata_full):
 @pytest.fixture(scope='session')
 def all_norm_tables(normalized_table_ctrl, normalized_table_synthetic_a, normalized_table_synthetic_b):
     import chronoclone as cc
-    tables = [normalized_table_ctrl, normalized_table_synthetic_a, normalized_table_synthetic_b]
+    # copies: add_barcode_rep_column adds a column in place, which must not
+    # reach the normalized_table_* fixtures used by other tests
+    tables = [t.copy() for t in
+              (normalized_table_ctrl, normalized_table_synthetic_a, normalized_table_synthetic_b)]
     cc.add_barcode_rep_column(tables)
     return tables
 
 
 @pytest.fixture(scope='session')
 def ctrl_metaclone_dict(adata_ctrl, all_norm_tables):
-    """Fake metaclone labels injected directly into adata_ctrl.obs."""
-    larry_ids = adata_ctrl.obs['LARRY_ID'].unique()
-    mc_map = {lid: f'MC{i % 2}' for i, lid in enumerate(larry_ids)}
-    adata_ctrl.obs['metaclone'] = adata_ctrl.obs['LARRY_ID'].map(mc_map)
-    # barcode_rep col must exist in adata_ctrl.obs for build_metaclone_dict
+    """Fake metaclone labels (alternating MC0/MC1) on a copy of adata_ctrl."""
     import chronoclone as cc
-    if 'barcode_rep' not in adata_ctrl.obs.columns:
-        adata_ctrl.obs['barcode_rep'] = adata_ctrl.obs['LARRY_ID']
-    return cc.build_metaclone_dict(adata_ctrl, barcode_col='LARRY_ID', metaclone_col='metaclone')
+    adata = adata_ctrl.copy()      # do not add columns to the shared adata_ctrl
+    larry_ids = adata.obs['LARRY_ID'].unique()
+    mc_map = {lid: f'MC{i % 2}' for i, lid in enumerate(larry_ids)}
+    adata.obs['metaclone'] = adata.obs['LARRY_ID'].map(mc_map)
+    return cc.build_metaclone_dict(adata, barcode_col='LARRY_ID', metaclone_col='metaclone')

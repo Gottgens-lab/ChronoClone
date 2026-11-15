@@ -11,7 +11,7 @@ import matplotlib
 matplotlib.use('Agg')  # non-interactive backend for CI
 import chronoclone as cc
 
-from tests.conftest import CELL_TYPES, DAYS_CTRL, DAYS_COMPARISON
+from tests.conftest import CELL_TYPES, DAYS_CTRL, DAYS_COMPARISON, SCORING_N_NEIGHBORS
 
 
 class TestFullPipeline:
@@ -27,10 +27,16 @@ class TestFullPipeline:
         assert 'LARRY_ID' in adata_ctrl.obs.columns
         assert 'BC03' not in adata_ctrl.obs['LARRY_ID'].values
 
-    def test_02_clone_table_shape(self, clone_table_ctrl):
-        n_time_points = 4
-        n_features = len(CELL_TYPES)
-        assert clone_table_ctrl.shape[1] == n_time_points * n_features
+    def test_02_clone_table_shape(self, adata_ctrl, clone_table_ctrl):
+        # One row per clone and one column per (day, cell type) seen in the data.
+        # Day0 cells are HSC/HSPC only, so Day0 has no CMP/MEP/GMP columns.
+        obs = adata_ctrl.obs
+        observed = set(zip(obs['day'].astype(str), obs['cell_type'].astype(str)))
+        expected = {f'Day{d}_Cluster{ct}' for d, ct in observed}
+        assert set(clone_table_ctrl.columns) == expected
+        assert clone_table_ctrl.shape == (obs['LARRY_ID'].nunique(), len(expected))
+        day0 = {c for c in clone_table_ctrl.columns if c.startswith('Day0_')}
+        assert day0 and day0.issubset({'Day0_ClusterHSC', 'Day0_ClusterHSPC'})
 
     def test_03_normalized_table_row_sums(self, normalized_table_ctrl):
         for day in DAYS_CTRL:
@@ -63,7 +69,7 @@ class TestFullPipeline:
             ctrl_key='SyntheticReference_Trajectory',
             ctrl_metaclone_dict=ctrl_metaclone_dict,
             all_features=shared,
-            n_neighbors=2,
+            n_neighbors=SCORING_N_NEIGHBORS,
         )
         assert isinstance(scores, pd.DataFrame)
         assert len(scores) > 0
@@ -86,7 +92,7 @@ class TestFullPipeline:
             ctrl_key='SyntheticReference_Trajectory',
             ctrl_metaclone_dict=ctrl_metaclone_dict,
             all_features=shared,
-            n_neighbors=2,
+            n_neighbors=SCORING_N_NEIGHBORS,
         )
         df_z = cc.compute_zscore(scores, control_label='SyntheticReference_Trajectory')
         assert 'z_score' in df_z.columns
@@ -106,7 +112,7 @@ class TestFullPipeline:
             ctrl_key='SyntheticReference_Trajectory',
             ctrl_metaclone_dict=ctrl_metaclone_dict,
             all_features=shared,
-            n_neighbors=2,
+            n_neighbors=SCORING_N_NEIGHBORS,
         )
         df_z = cc.compute_zscore(scores, control_label='SyntheticReference_Trajectory')
         # Should run without raising
