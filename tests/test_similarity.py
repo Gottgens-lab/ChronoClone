@@ -8,7 +8,7 @@ import pandas as pd
 import pytest
 import chronoclone as cc
 
-from tests.conftest import CELL_TYPES, DAYS_CTRL, DAYS_COMPARISON
+from tests.conftest import CELL_TYPES, DAYS_CTRL, DAYS_COMPARISON, SCORING_N_NEIGHBORS
 
 
 # ============================================================
@@ -145,7 +145,7 @@ class TestComputeSimilarityScoresMulti:
             ctrl_key='SyntheticReference_Trajectory',
             ctrl_metaclone_dict=ctrl_metaclone_dict,
             all_features=shared_features,
-            n_neighbors=2,
+            n_neighbors=SCORING_N_NEIGHBORS,
         )
 
     def test_returns_dataframe(self, traj_scores):
@@ -184,7 +184,7 @@ class TestComputeZscore:
             ctrl_key='SyntheticReference_Trajectory',
             ctrl_metaclone_dict=ctrl_metaclone_dict,
             all_features=shared_features,
-            n_neighbors=2,
+            n_neighbors=SCORING_N_NEIGHBORS,
         )
         return cc.compute_zscore(traj_scores, control_label='SyntheticReference_Trajectory')
 
@@ -217,7 +217,7 @@ class TestComputeZscore:
             ctrl_key='SyntheticReference_Trajectory',
             ctrl_metaclone_dict=ctrl_metaclone_dict,
             all_features=shared_features,
-            n_neighbors=2,
+            n_neighbors=SCORING_N_NEIGHBORS,
         )
         df_z_strict = cc.compute_zscore(
             traj_scores, control_label='SyntheticReference_Trajectory', min_ctrl_n=10000

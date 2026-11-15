@@ -127,7 +127,7 @@ class TestBuildCloneTable:
         assert len(table) == 0
 
     def test_comparison_all_clones_kept(self, adata_full):
-        # Synthetic comparison condition with no filter: expect all 4 unique LARRY_IDs
+        # Synthetic comparison condition with no filter: expect every LARRY_ID of the condition
         adata_sub = adata_full[adata_full.obs['condition'] == 'SyntheticA'].copy()
         table = cc.build_clone_table(
             adata_sub, clone_id_col='LARRY_ID', time_col='day', feature_col='cell_type',

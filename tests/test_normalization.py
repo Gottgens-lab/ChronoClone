@@ -15,11 +15,19 @@ class TestNormalizeCloneTable:
     def test_returns_dataframe(self, normalized_table_ctrl):
         assert isinstance(normalized_table_ctrl, pd.DataFrame)
 
-    def test_columns_match_expected(self, normalized_table_ctrl):
-        for day in DAYS_CTRL:
-            for ct in CELL_TYPES:
-                col = f'{day}_Cluster{ct}'
-                assert col in normalized_table_ctrl.columns, f'Missing column: {col}'
+    def test_columns_match_expected(self, adata_ctrl, normalized_table_ctrl):
+        # One column per (day, cell type) seen in the data, ordered by DAYS_CTRL
+        # then CELL_TYPES. Day0 cells are HSC/HSPC only, so Day0 has no
+        # CMP/MEP/GMP columns.
+        obs = adata_ctrl.obs
+        observed = set(zip('Day' + obs['day'].astype(str), obs['cell_type'].astype(str)))
+        expected = [f'{day}_Cluster{ct}' for day in DAYS_CTRL for ct in CELL_TYPES
+                    if (day, ct) in observed]
+        assert list(normalized_table_ctrl.columns) == expected
+        day0 = {c for c in normalized_table_ctrl.columns if c.startswith('Day0_')}
+        assert day0 and day0.issubset({'Day0_ClusterHSC', 'Day0_ClusterHSPC'})
+        for day in DAYS_CTRL[1:]:
+            assert any(c.startswith(f'{day}_') for c in normalized_table_ctrl.columns)
 
     def test_row_sums_at_each_day(self, normalized_table_ctrl):
         # Each clone at each time point should sum to 1 (or 0 if absent)
