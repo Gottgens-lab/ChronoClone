@@ -2,6 +2,7 @@ from ._version import __version__
 
 from .preprocessing import rename_labels, build_clone_table, filter_lineage_continuity
 from .normalization import normalize_clone_table
+from .multi_feature import build_multi_feature_table
 from .consensus import build_consensus_matrix
 from .clustering import (
     sweep_thresholds,
@@ -53,6 +54,7 @@ __all__ = [
     'build_clone_table',
     'filter_lineage_continuity',
     'normalize_clone_table',
+    'build_multi_feature_table',
     'build_consensus_matrix',
     'sweep_thresholds',
     'fit_final_clustering',
