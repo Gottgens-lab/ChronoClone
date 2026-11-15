@@ -3,8 +3,6 @@ tests/test_multi_feature.py
 Tests for chronoclone.multi_feature.build_multi_feature_table
 """
 
-from pathlib import Path
-
 import numpy as np
 import pandas as pd
 import anndata as ad
@@ -341,3 +339,4 @@ def test_share_table_runs_through_consensus_and_sweep(synthetic, synthetic_table
     out = cc.sweep_thresholds(1 - consensus, filtered, thresholds=[0.1, 0.3, 0.5, 0.7])
     final_labels, sil = out[4], out[5]
     assert len(final_labels) == len(sil) == len(filtered)
+
