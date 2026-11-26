@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/chronoclone_logo.jpg" alt="ChronoClone logo" width="360">
+</p>
+
 # ChronoClone
 
 ChronoClone identifies metaclones: groups of clones with similar cell-state trajectories over time. It builds clone-by-time features, combines clustering results across resolutions, and displays the resulting groups on a density UMAP.
