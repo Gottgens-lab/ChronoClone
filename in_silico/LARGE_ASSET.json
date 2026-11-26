@@ -3,7 +3,7 @@
   "repository": "hiromitsuhari/ChronoClone_paper",
   "tag": "manuscript-v5-20260914",
   "release_id": 388574769,
-  "draft": true,
+  "draft": false,
   "asset_id": 563855932,
   "asset_name": "ode_noise_repeat_level_20260812.csv.gz",
   "restore_relative_path": "results/aggregate/native_method_noise_runs.csv.gz",
@@ -12,8 +12,8 @@
   "rows": 1300500,
   "role": "Historical five-adapter repeat-level evidence; four ranked estimators plus separate abundance-only applicability audit.",
   "api_url": "https://api.github.com/repos/hiromitsuhari/ChronoClone_paper/releases/assets/563855932",
-  "browser_download_url": "https://github.com/hiromitsuhari/ChronoClone_paper/releases/download/untagged-657e915dc7563f3461c6/ode_noise_repeat_level_20260812.csv.gz",
-  "authentication": "Use gh authenticated with an account that can read the private paper repository. The real release tag above selects the draft; the untagged browser URL is not a public download.",
+  "browser_download_url": "https://github.com/hiromitsuhari/ChronoClone_paper/releases/download/manuscript-v5-20260914/ode_noise_repeat_level_20260812.csv.gz",
+  "authentication": "Not required: the paper release is public. fetch_repeat_evidence.py uses GitHub CLI; browser_download_url can be downloaded directly and checked against bytes and sha256.",
   "required_for_summary_plots": false,
   "required_for_repeat_level_inspection": true
 }

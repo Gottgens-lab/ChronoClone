@@ -58,14 +58,14 @@ Optional noise/repeat arguments select one configured condition. These bounded w
 
 Compact summary tables in [results/aggregate](results/aggregate) cover the complete grid and are sufficient for the result figures. The **1,300,500-row, 153,477,867-byte** repeat-level CSV is held once as a versioned asset in the paper repository because it exceeds ordinary Git's per-file limit. It includes the separate fifth adapter, input tensor hashes, seeds, fitting diagnostics and retention payloads. It does not store every full noisy count tensor; the exact generator reconstructs those from configuration and seeds.
 
-Read [LARGE_ASSET.json](LARGE_ASSET.json) for the registered identity. The release currently remains a private draft, so authenticate GitHub CLI with access to the paper repository, then run:
+Read [LARGE_ASSET.json](LARGE_ASSET.json) for the registered identity. The release is public. With GitHub CLI signed in, run:
 
 ```bash
 gh auth login
 python in_silico/scripts/fetch_repeat_evidence.py
 ```
 
-This retrieves tag `manuscript-v5-20260914` from `hiromitsuhari/ChronoClone_paper`, verifies byte count and SHA-256, and atomically publishes `in_silico/results/aggregate/native_method_noise_runs.csv.gz`. An already matching file is reused; a different existing file is not overwritten. The browser's temporary `untagged-…` draft URL is not a public download. The full file supports independent repeat-level inspection and the portable Cyclone applicability diagnostic; summary plots do not require it. After fetching it, run:
+This retrieves tag `manuscript-v5-20260914` from `hiromitsuhari/ChronoClone_paper`, verifies byte count and SHA-256, and atomically publishes `in_silico/results/aggregate/native_method_noise_runs.csv.gz`. An already matching file is reused; a different existing file is not overwritten. Without GitHub CLI, download `browser_download_url` from LARGE_ASSET.json and check its byte count and SHA-256. The full file supports independent repeat-level inspection and the portable Cyclone applicability diagnostic; summary plots do not require it. After fetching it, run:
 
 ```bash
 python in_silico/run_notebook.py in_silico/notebooks/0004_cyclone_applicability_diagnostic.ipynb --kernel chronoclone-benchmark
