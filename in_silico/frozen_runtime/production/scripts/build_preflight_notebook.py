@@ -23,10 +23,10 @@ def main() -> int:
         "language_info": {"name": "python", "version": "3.11.15"},
         "execution": {
             "environment_name": "chronoclone",
-            "environment_path": "/Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone",
+            "environment_path": "/path/to/ChronoClone/.runtime/chronoclone",
             "kernel": "chronoclone",
             "command": (
-                "/Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone/bin/python "
+                "/path/to/ChronoClone/.runtime/chronoclone/bin/python "
                 "scripts/execute_notebook.py notebooks/0001_day0_locked_setup_and_preflight.ipynb"
             ),
             "status": "not_executed",
@@ -46,10 +46,10 @@ def main() -> int:
             "assert ROOT.name == 'chronoclone_method_noise_benchmark_day0_locked_20260812'\n"
             "ENVIRONMENT = {\n"
             "    'name': 'chronoclone',\n"
-            "    'path': '/Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone',\n"
+            "    'path': '/path/to/ChronoClone/.runtime/chronoclone',\n"
             "    'kernel': 'chronoclone',\n"
             "    'python': platform.python_version(),\n"
-            "    'execution_command': '/Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone/bin/python scripts/execute_notebook.py notebooks/0001_day0_locked_setup_and_preflight.ipynb',\n"
+            "    'execution_command': '/path/to/ChronoClone/.runtime/chronoclone/bin/python scripts/execute_notebook.py notebooks/0001_day0_locked_setup_and_preflight.ipynb',\n"
             "}\n"
             "assert ENVIRONMENT['python'] == '3.11.15'\n"
             "ENVIRONMENT"

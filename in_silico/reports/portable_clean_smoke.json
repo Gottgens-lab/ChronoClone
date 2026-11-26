@@ -15,8 +15,8 @@
   "postfit_retention_fraction": 1.0,
   "postfit_rule": "sample silhouette >= -0.1; no size filter, no refit",
   "runtime": {
-    "python": "/Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone/bin/python",
-    "prefix": "/Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone",
+    "python": "/path/to/ChronoClone/.runtime/chronoclone/bin/python",
+    "prefix": "/path/to/ChronoClone/.runtime/chronoclone",
     "platform": "macOS-26.6.2-arm64-arm-64bit",
     "versions": {
       "anndata": "0.12.18",

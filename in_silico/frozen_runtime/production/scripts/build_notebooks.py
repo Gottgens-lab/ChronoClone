@@ -247,10 +247,10 @@ def build_notebook() -> None:
         "execution": {
             "environment_manager": "micromamba-compatible existing prefix",
             "environment_name": "chronoclone",
-            "environment_path": "/Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone",
+            "environment_path": "/path/to/ChronoClone/.runtime/chronoclone",
             "kernel": "chronoclone",
             "command": (
-                "/Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone/bin/python "
+                "/path/to/ChronoClone/.runtime/chronoclone/bin/python "
                 "scripts/execute_notebook.py "
                 "notebooks/0003_day0_locked_method_noise_results.ipynb"
             ),
@@ -296,14 +296,14 @@ FIGURES.mkdir(parents=True, exist_ok=True)
 ENVIRONMENT = {
     "manager": "micromamba-compatible existing prefix",
     "name": "chronoclone",
-    "path": "/Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone",
+    "path": "/path/to/ChronoClone/.runtime/chronoclone",
     "kernel": "chronoclone",
     "python": platform.python_version(),
     "versions": {
         name: importlib.metadata.version(name)
         for name in ["numpy", "pandas", "scipy", "scikit-learn", "scanpy", "matplotlib", "nbformat", "nbclient"]
     },
-    "execution_command": "/Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone/bin/python scripts/execute_notebook.py notebooks/0003_day0_locked_method_noise_results.ipynb",
+    "execution_command": "/path/to/ChronoClone/.runtime/chronoclone/bin/python scripts/execute_notebook.py notebooks/0003_day0_locked_method_noise_results.ipynb",
 }
 assert ENVIRONMENT["python"] == "3.11.15"
 assert Path(ENVIRONMENT["path"]).is_dir()

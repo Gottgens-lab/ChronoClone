@@ -146,8 +146,8 @@
   {
     "source": "analysis_workspace/releases/chronoclone_paper_repository_20260908/repository/analyses/01_ode_benchmark/provenance/locked_production_source/scripts/build_behavioral_pilot_notebook.py",
     "destination": "in_silico/frozen_runtime/production/scripts/build_behavioral_pilot_notebook.py",
-    "bytes": 8150,
-    "sha256": "e667c09dd3d96b9852e9d16ea298e9eda2f1d31cfcacabd9b5f98e6ec42bf02e",
+    "bytes": 8050,
+    "sha256": "6125a38daebdc44b224933f137cc14066f3ce75a20f7c384447e09077c4721d2",
     "role": "Checksum-preserved production source; historical absolute paths, not an active launcher.",
     "destination_sha256_at_copy": "5eeb62132983b93e88a7561a4b1c46b95443ad75f644d58d4d854ae2ce2f86a4",
     "source_sha256": "5eeb62132983b93e88a7561a4b1c46b95443ad75f644d58d4d854ae2ce2f86a4",
@@ -156,16 +156,16 @@
     "historical_operation": "copy_exact",
     "pre_publication_execution_sha256": "5eeb62132983b93e88a7561a4b1c46b95443ad75f644d58d4d854ae2ce2f86a4",
     "pre_publication_execution_bytes": 8130,
-    "publication_sha256": "e667c09dd3d96b9852e9d16ea298e9eda2f1d31cfcacabd9b5f98e6ec42bf02e",
+    "publication_sha256": "6125a38daebdc44b224933f137cc14066f3ce75a20f7c384447e09077c4721d2",
     "publication_adaptation": "path_labels_execution_display_or_provenance_description",
     "paper_destination": "benchmarks/frozen_runtime/production/scripts/build_behavioral_pilot_notebook.py",
-    "package_sha256": "e667c09dd3d96b9852e9d16ea298e9eda2f1d31cfcacabd9b5f98e6ec42bf02e"
+    "package_sha256": "6125a38daebdc44b224933f137cc14066f3ce75a20f7c384447e09077c4721d2"
   },
   {
     "source": "analysis_workspace/releases/chronoclone_paper_repository_20260908/repository/analyses/01_ode_benchmark/provenance/locked_production_source/scripts/build_cyclone_applicability_diagnostic.py",
     "destination": "in_silico/frozen_runtime/production/scripts/build_cyclone_applicability_diagnostic.py",
-    "bytes": 17965,
-    "sha256": "3c3e2c4df80339ef75a03f61ef7ebcd9ae27b69541d9984bdb69a343498f25ac",
+    "bytes": 17925,
+    "sha256": "1239bec33ae7cec370814ff7091815df196126088dbcc90acbbc3ee503a551a7",
     "role": "Checksum-preserved production source; historical absolute paths, not an active launcher.",
     "destination_sha256_at_copy": "5081c2e5dec7896093d0721dfd67c00c4053012c1106e2ee3865538472fb8d40",
     "source_sha256": "5081c2e5dec7896093d0721dfd67c00c4053012c1106e2ee3865538472fb8d40",
@@ -174,10 +174,10 @@
     "historical_operation": "copy_exact",
     "pre_publication_execution_sha256": "5081c2e5dec7896093d0721dfd67c00c4053012c1106e2ee3865538472fb8d40",
     "pre_publication_execution_bytes": 17957,
-    "publication_sha256": "3c3e2c4df80339ef75a03f61ef7ebcd9ae27b69541d9984bdb69a343498f25ac",
+    "publication_sha256": "1239bec33ae7cec370814ff7091815df196126088dbcc90acbbc3ee503a551a7",
     "publication_adaptation": "path_labels_execution_display_or_provenance_description",
     "paper_destination": "benchmarks/frozen_runtime/production/scripts/build_cyclone_applicability_diagnostic.py",
-    "package_sha256": "3c3e2c4df80339ef75a03f61ef7ebcd9ae27b69541d9984bdb69a343498f25ac"
+    "package_sha256": "1239bec33ae7cec370814ff7091815df196126088dbcc90acbbc3ee503a551a7"
   },
   {
     "source": "analysis_workspace/releases/chronoclone_paper_repository_20260908/repository/analyses/01_ode_benchmark/provenance/locked_production_source/scripts/build_four_method_results_notebook.py",
@@ -200,8 +200,8 @@
   {
     "source": "analysis_workspace/releases/chronoclone_paper_repository_20260908/repository/analyses/01_ode_benchmark/provenance/locked_production_source/scripts/build_notebooks.py",
     "destination": "in_silico/frozen_runtime/production/scripts/build_notebooks.py",
-    "bytes": 23204,
-    "sha256": "b9c655f068d0d04f9e0f12454677c2957f71743b7e19032ffcbe5e46dccdf3f7",
+    "bytes": 23124,
+    "sha256": "db8a9e48b579edc51a4774b3bcf6fdb537b73f64b055b9362692831a1a5ecd65",
     "role": "Checksum-preserved production source; historical absolute paths, not an active launcher.",
     "destination_sha256_at_copy": "312a6171673bbc8b239d5199eb976b1a77d3873222ba583522f413b43ac6d79a",
     "source_sha256": "312a6171673bbc8b239d5199eb976b1a77d3873222ba583522f413b43ac6d79a",
@@ -210,16 +210,16 @@
     "historical_operation": "copy_exact",
     "pre_publication_execution_sha256": "312a6171673bbc8b239d5199eb976b1a77d3873222ba583522f413b43ac6d79a",
     "pre_publication_execution_bytes": 23188,
-    "publication_sha256": "b9c655f068d0d04f9e0f12454677c2957f71743b7e19032ffcbe5e46dccdf3f7",
+    "publication_sha256": "db8a9e48b579edc51a4774b3bcf6fdb537b73f64b055b9362692831a1a5ecd65",
     "publication_adaptation": "path_labels_execution_display_or_provenance_description",
     "paper_destination": "benchmarks/frozen_runtime/production/scripts/build_notebooks.py",
-    "package_sha256": "b9c655f068d0d04f9e0f12454677c2957f71743b7e19032ffcbe5e46dccdf3f7"
+    "package_sha256": "db8a9e48b579edc51a4774b3bcf6fdb537b73f64b055b9362692831a1a5ecd65"
   },
   {
     "source": "analysis_workspace/releases/chronoclone_paper_repository_20260908/repository/analyses/01_ode_benchmark/provenance/locked_production_source/scripts/build_preflight_notebook.py",
     "destination": "in_silico/frozen_runtime/production/scripts/build_preflight_notebook.py",
-    "bytes": 5140,
-    "sha256": "c684b4c798deaa150aff8c7770bd11d1b761794ef15b886932ba124f65692d79",
+    "bytes": 5060,
+    "sha256": "bf9a9bb047a48c3050726f88ed7e63b8c391afbb0350775714acbba1594dad87",
     "role": "Checksum-preserved production source; historical absolute paths, not an active launcher.",
     "destination_sha256_at_copy": "d788f07d16c81df0a4785acc18bd251923828713f7d8fa3c1c3055c0739809cd",
     "source_sha256": "d788f07d16c81df0a4785acc18bd251923828713f7d8fa3c1c3055c0739809cd",
@@ -228,10 +228,10 @@
     "historical_operation": "copy_exact",
     "pre_publication_execution_sha256": "d788f07d16c81df0a4785acc18bd251923828713f7d8fa3c1c3055c0739809cd",
     "pre_publication_execution_bytes": 5124,
-    "publication_sha256": "c684b4c798deaa150aff8c7770bd11d1b761794ef15b886932ba124f65692d79",
+    "publication_sha256": "bf9a9bb047a48c3050726f88ed7e63b8c391afbb0350775714acbba1594dad87",
     "publication_adaptation": "path_labels_execution_display_or_provenance_description",
     "paper_destination": "benchmarks/frozen_runtime/production/scripts/build_preflight_notebook.py",
-    "package_sha256": "c684b4c798deaa150aff8c7770bd11d1b761794ef15b886932ba124f65692d79"
+    "package_sha256": "bf9a9bb047a48c3050726f88ed7e63b8c391afbb0350775714acbba1594dad87"
   },
   {
     "source": "analysis_workspace/releases/chronoclone_paper_repository_20260908/repository/analyses/01_ode_benchmark/provenance/locked_production_source/scripts/cyclone_adapter.py",
@@ -326,8 +326,8 @@
   {
     "source": "analysis_workspace/releases/chronoclone_paper_repository_20260908/repository/analyses/01_ode_benchmark/provenance/locked_production_source/scripts/run_local_benchmark.py",
     "destination": "in_silico/frozen_runtime/production/scripts/run_local_benchmark.py",
-    "bytes": 32348,
-    "sha256": "ace32a6b6b2273b045d89b0bf407d9f55754baf8f3af2aed4a5bd800c5656ee5",
+    "bytes": 32328,
+    "sha256": "57ae24f33e6614f25b287b06834df54ce317f14b74c2629c6f56cc17c692c7a0",
     "role": "Checksum-preserved production source; historical absolute paths, not an active launcher.",
     "destination_sha256_at_copy": "06ea9cedf5dbf1c95e8bd825ce53af64a9fdfbbae5115ca09c55dd4a084ed494",
     "source_sha256": "06ea9cedf5dbf1c95e8bd825ce53af64a9fdfbbae5115ca09c55dd4a084ed494",
@@ -336,16 +336,16 @@
     "historical_operation": "copy_exact",
     "pre_publication_execution_sha256": "06ea9cedf5dbf1c95e8bd825ce53af64a9fdfbbae5115ca09c55dd4a084ed494",
     "pre_publication_execution_bytes": 32344,
-    "publication_sha256": "ace32a6b6b2273b045d89b0bf407d9f55754baf8f3af2aed4a5bd800c5656ee5",
+    "publication_sha256": "57ae24f33e6614f25b287b06834df54ce317f14b74c2629c6f56cc17c692c7a0",
     "publication_adaptation": "path_labels_execution_display_or_provenance_description",
     "paper_destination": "benchmarks/frozen_runtime/production/scripts/run_local_benchmark.py",
-    "package_sha256": "ace32a6b6b2273b045d89b0bf407d9f55754baf8f3af2aed4a5bd800c5656ee5"
+    "package_sha256": "57ae24f33e6614f25b287b06834df54ce317f14b74c2629c6f56cc17c692c7a0"
   },
   {
     "source": "analysis_workspace/releases/chronoclone_paper_repository_20260908/repository/analyses/01_ode_benchmark/provenance/locked_production_source/scripts/run_persistent_controller.sh",
     "destination": "in_silico/frozen_runtime/production/scripts/run_persistent_controller.sh",
-    "bytes": 2165,
-    "sha256": "0ef8afa6e2b73c670c3643f7d033a21c06c176b0d8f3fc332fceab42c9673b91",
+    "bytes": 2105,
+    "sha256": "1f4d23afc5e26288acb9dab4200fe1b96c1a1d08e4e1cce2a5197d3399c67be0",
     "role": "Checksum-preserved production source; historical absolute paths, not an active launcher.",
     "destination_sha256_at_copy": "cdf2bb07fb0ea3771085fbc8ca6e78112820923527a6dbc37ab6fec55914b2e7",
     "source_sha256": "cdf2bb07fb0ea3771085fbc8ca6e78112820923527a6dbc37ab6fec55914b2e7",
@@ -354,16 +354,16 @@
     "historical_operation": "copy_exact",
     "pre_publication_execution_sha256": "cdf2bb07fb0ea3771085fbc8ca6e78112820923527a6dbc37ab6fec55914b2e7",
     "pre_publication_execution_bytes": 2151,
-    "publication_sha256": "0ef8afa6e2b73c670c3643f7d033a21c06c176b0d8f3fc332fceab42c9673b91",
+    "publication_sha256": "1f4d23afc5e26288acb9dab4200fe1b96c1a1d08e4e1cce2a5197d3399c67be0",
     "publication_adaptation": "path_labels_execution_display_or_provenance_description",
     "paper_destination": "benchmarks/frozen_runtime/production/scripts/run_persistent_controller.sh",
-    "package_sha256": "0ef8afa6e2b73c670c3643f7d033a21c06c176b0d8f3fc332fceab42c9673b91"
+    "package_sha256": "1f4d23afc5e26288acb9dab4200fe1b96c1a1d08e4e1cce2a5197d3399c67be0"
   },
   {
     "source": "analysis_workspace/releases/chronoclone_paper_repository_20260908/repository/analyses/01_ode_benchmark/provenance/locked_production_source/scripts/run_structural_preflight.py",
     "destination": "in_silico/frozen_runtime/production/scripts/run_structural_preflight.py",
-    "bytes": 7671,
-    "sha256": "e8d96a60abae7c4c4d4ef021c9fac71e0e789812d35b783878bf3b20ca7d5ea6",
+    "bytes": 7631,
+    "sha256": "235eafaea1bc58a93898fe7a1e76abbcb66aeac6ee737d58e0b91132f39f2043",
     "role": "Checksum-preserved production source; historical absolute paths, not an active launcher.",
     "destination_sha256_at_copy": "b5561d016c417b60af11c774938ba40da75cc4bacc031ef55e90a27eaa45ee7a",
     "source_sha256": "b5561d016c417b60af11c774938ba40da75cc4bacc031ef55e90a27eaa45ee7a",
@@ -372,16 +372,16 @@
     "historical_operation": "copy_exact",
     "pre_publication_execution_sha256": "b5561d016c417b60af11c774938ba40da75cc4bacc031ef55e90a27eaa45ee7a",
     "pre_publication_execution_bytes": 7663,
-    "publication_sha256": "e8d96a60abae7c4c4d4ef021c9fac71e0e789812d35b783878bf3b20ca7d5ea6",
+    "publication_sha256": "235eafaea1bc58a93898fe7a1e76abbcb66aeac6ee737d58e0b91132f39f2043",
     "publication_adaptation": "path_labels_execution_display_or_provenance_description",
     "paper_destination": "benchmarks/frozen_runtime/production/scripts/run_structural_preflight.py",
-    "package_sha256": "e8d96a60abae7c4c4d4ef021c9fac71e0e789812d35b783878bf3b20ca7d5ea6"
+    "package_sha256": "235eafaea1bc58a93898fe7a1e76abbcb66aeac6ee737d58e0b91132f39f2043"
   },
   {
     "source": "analysis_workspace/releases/chronoclone_paper_repository_20260908/repository/analyses/01_ode_benchmark/provenance/locked_production_source/scripts/source_runtime.py",
     "destination": "in_silico/frozen_runtime/production/scripts/source_runtime.py",
-    "bytes": 2842,
-    "sha256": "a5de83450015304ae3f9b43cb6d90626ac9fa3df81c70f16a333486956cb91e4",
+    "bytes": 2822,
+    "sha256": "5a5d9fa5f842512cfb06fea2ec0acf4fee960e7c0f027dc314e0f10dfe720be8",
     "role": "Checksum-preserved production source; historical absolute paths, not an active launcher.",
     "destination_sha256_at_copy": "465d13ff96eed018e88691b484a6c55631e4a5959ed15143ec70f72363370c8d",
     "source_sha256": "465d13ff96eed018e88691b484a6c55631e4a5959ed15143ec70f72363370c8d",
@@ -390,16 +390,16 @@
     "historical_operation": "copy_exact",
     "pre_publication_execution_sha256": "465d13ff96eed018e88691b484a6c55631e4a5959ed15143ec70f72363370c8d",
     "pre_publication_execution_bytes": 2837,
-    "publication_sha256": "a5de83450015304ae3f9b43cb6d90626ac9fa3df81c70f16a333486956cb91e4",
+    "publication_sha256": "5a5d9fa5f842512cfb06fea2ec0acf4fee960e7c0f027dc314e0f10dfe720be8",
     "publication_adaptation": "path_labels_execution_display_or_provenance_description",
     "paper_destination": "benchmarks/frozen_runtime/production/scripts/source_runtime.py",
-    "package_sha256": "a5de83450015304ae3f9b43cb6d90626ac9fa3df81c70f16a333486956cb91e4"
+    "package_sha256": "5a5d9fa5f842512cfb06fea2ec0acf4fee960e7c0f027dc314e0f10dfe720be8"
   },
   {
     "source": "analysis_workspace/releases/chronoclone_paper_repository_20260908/repository/analyses/01_ode_benchmark/provenance/locked_production_source/scripts/start_local_benchmark.sh",
     "destination": "in_silico/frozen_runtime/production/scripts/start_local_benchmark.sh",
-    "bytes": 1706,
-    "sha256": "86059f1ad50362f6df9ac8885dc6ac39009f276153b89ab4e06fe02d1b4337e3",
+    "bytes": 1666,
+    "sha256": "5d7bb7559ad630fce364a4c459e8b241f6b56ae396e411167e12e4f3454295f2",
     "role": "Checksum-preserved production source; historical absolute paths, not an active launcher.",
     "destination_sha256_at_copy": "fcf33c168733d26aac0634e60f7983e0ae6ca7568bd5812305059c6c2fc4a3a3",
     "source_sha256": "fcf33c168733d26aac0634e60f7983e0ae6ca7568bd5812305059c6c2fc4a3a3",
@@ -408,10 +408,10 @@
     "historical_operation": "copy_exact",
     "pre_publication_execution_sha256": "fcf33c168733d26aac0634e60f7983e0ae6ca7568bd5812305059c6c2fc4a3a3",
     "pre_publication_execution_bytes": 1697,
-    "publication_sha256": "86059f1ad50362f6df9ac8885dc6ac39009f276153b89ab4e06fe02d1b4337e3",
+    "publication_sha256": "5d7bb7559ad630fce364a4c459e8b241f6b56ae396e411167e12e4f3454295f2",
     "publication_adaptation": "path_labels_execution_display_or_provenance_description",
     "paper_destination": "benchmarks/frozen_runtime/production/scripts/start_local_benchmark.sh",
-    "package_sha256": "86059f1ad50362f6df9ac8885dc6ac39009f276153b89ab4e06fe02d1b4337e3"
+    "package_sha256": "5d7bb7559ad630fce364a4c459e8b241f6b56ae396e411167e12e4f3454295f2"
   },
   {
     "source": "analysis_workspace/releases/chronoclone_paper_repository_20260908/repository/analyses/01_ode_benchmark/provenance/locked_production_source/scripts/validate_postprocessing.py",
@@ -434,8 +434,8 @@
   {
     "source": "analysis_workspace/releases/chronoclone_paper_repository_20260908/repository/analyses/01_ode_benchmark/provenance/locked_production_source/tests/test_corrected_core.py",
     "destination": "in_silico/frozen_runtime/production/tests/test_corrected_core.py",
-    "bytes": 8449,
-    "sha256": "4567a10ddc229655bae3dc0810f1fa468ecdf815847af99baf938e60e2d549d2",
+    "bytes": 8429,
+    "sha256": "9136a850f93ca78486d75ca4def2b04366df8b2d1a77eb4016a222b896b56e0d",
     "role": "Checksum-preserved production source; historical absolute paths, not an active launcher.",
     "destination_sha256_at_copy": "ba53359ab8c67f98c6c4a9441a387927044aa532bfd36d9a389c8ff5312a7352",
     "source_sha256": "ba53359ab8c67f98c6c4a9441a387927044aa532bfd36d9a389c8ff5312a7352",
@@ -444,16 +444,16 @@
     "historical_operation": "copy_exact",
     "pre_publication_execution_sha256": "ba53359ab8c67f98c6c4a9441a387927044aa532bfd36d9a389c8ff5312a7352",
     "pre_publication_execution_bytes": 8445,
-    "publication_sha256": "4567a10ddc229655bae3dc0810f1fa468ecdf815847af99baf938e60e2d549d2",
+    "publication_sha256": "9136a850f93ca78486d75ca4def2b04366df8b2d1a77eb4016a222b896b56e0d",
     "publication_adaptation": "path_labels_execution_display_or_provenance_description",
     "paper_destination": "benchmarks/frozen_runtime/production/tests/test_corrected_core.py",
-    "package_sha256": "4567a10ddc229655bae3dc0810f1fa468ecdf815847af99baf938e60e2d549d2"
+    "package_sha256": "9136a850f93ca78486d75ca4def2b04366df8b2d1a77eb4016a222b896b56e0d"
   },
   {
     "source": "analysis_workspace/releases/chronoclone_paper_repository_20260908/repository/analyses/01_ode_benchmark/provenance/locked_production_source/tests/test_cyclone_adapter.py",
     "destination": "in_silico/frozen_runtime/production/tests/test_cyclone_adapter.py",
-    "bytes": 14831,
-    "sha256": "d1d1d17c68f659ef69665368fcced0726e6fed7c34e8f3e34321e6e12f6152d7",
+    "bytes": 14811,
+    "sha256": "df44569bcd587c08d604951ccf214f4c72ee636e7dc10db4ea31f1842c522e2a",
     "role": "Checksum-preserved production source; historical absolute paths, not an active launcher.",
     "destination_sha256_at_copy": "741977b3203474ba73f1c8ffcd19bbb80b6e4f35ba5316595b212c4d324cacc0",
     "source_sha256": "741977b3203474ba73f1c8ffcd19bbb80b6e4f35ba5316595b212c4d324cacc0",
@@ -462,10 +462,10 @@
     "historical_operation": "copy_exact",
     "pre_publication_execution_sha256": "741977b3203474ba73f1c8ffcd19bbb80b6e4f35ba5316595b212c4d324cacc0",
     "pre_publication_execution_bytes": 14827,
-    "publication_sha256": "d1d1d17c68f659ef69665368fcced0726e6fed7c34e8f3e34321e6e12f6152d7",
+    "publication_sha256": "df44569bcd587c08d604951ccf214f4c72ee636e7dc10db4ea31f1842c522e2a",
     "publication_adaptation": "path_labels_execution_display_or_provenance_description",
     "paper_destination": "benchmarks/frozen_runtime/production/tests/test_cyclone_adapter.py",
-    "package_sha256": "d1d1d17c68f659ef69665368fcced0726e6fed7c34e8f3e34321e6e12f6152d7"
+    "package_sha256": "df44569bcd587c08d604951ccf214f4c72ee636e7dc10db4ea31f1842c522e2a"
   },
   {
     "source": "analysis_workspace/releases/chronoclone_paper_repository_20260908/repository/analyses/01_ode_benchmark/provenance/locked_production_source/tests/test_postprocessing.py",
@@ -542,8 +542,8 @@
   {
     "source": "analysis_workspace/releases/chronoclone_paper_repository_20260908/repository/analyses/01_ode_benchmark/provenance/native_method_noise_benchmark_local_20260803/results/provenance/environment_manifest.json",
     "destination": "in_silico/frozen_runtime/native_20260803/results/provenance/environment_manifest.json",
-    "bytes": 7821,
-    "sha256": "88e12497522df63e9428c10b450327f549f46436805bde89b747b37f596f6b53",
+    "bytes": 7161,
+    "sha256": "ea6cea9f9fdca46e8b5c6a13bf934c98c69eb87d45a94c5ff315bac5744fdfb9",
     "role": "Frozen exact benchmark dependency and wheel; not maintained package distribution.",
     "destination_sha256_at_copy": "9c642ec81219966897cdf2015f2eff3288668900d70c6f031461aad5ae87febd",
     "source_sha256": "9c642ec81219966897cdf2015f2eff3288668900d70c6f031461aad5ae87febd",
@@ -552,10 +552,10 @@
     "historical_operation": "copy_exact",
     "pre_publication_execution_sha256": "9c642ec81219966897cdf2015f2eff3288668900d70c6f031461aad5ae87febd",
     "pre_publication_execution_bytes": 7686,
-    "publication_sha256": "88e12497522df63e9428c10b450327f549f46436805bde89b747b37f596f6b53",
+    "publication_sha256": "ea6cea9f9fdca46e8b5c6a13bf934c98c69eb87d45a94c5ff315bac5744fdfb9",
     "publication_adaptation": "path_labels_execution_display_or_provenance_description",
     "paper_destination": "benchmarks/frozen_runtime/native_20260803/results/provenance/environment_manifest.json",
-    "package_sha256": "88e12497522df63e9428c10b450327f549f46436805bde89b747b37f596f6b53"
+    "package_sha256": "ea6cea9f9fdca46e8b5c6a13bf934c98c69eb87d45a94c5ff315bac5744fdfb9"
   },
   {
     "source": "analysis_workspace/releases/chronoclone_paper_repository_20260908/repository/analyses/01_ode_benchmark/provenance/native_method_noise_benchmark_local_20260803/results/provenance/local_conda_records.json",
@@ -596,8 +596,8 @@
   {
     "source": "analysis_workspace/benchmarks/chronoclone_method_noise_benchmark_day0_locked_20260812/results/provenance/production_source_manifest.sha256",
     "destination": "in_silico/frozen_runtime/provenance/production_source_manifest.sha256",
-    "bytes": 1877,
-    "sha256": "3c1114586820b26b15a1257fe99a238281d66ebd60758c12fe8220b958e8647e",
+    "bytes": 1717,
+    "sha256": "5fc9ee0a6673fe91cb09ca3001f12dfcc4393cb7a9e28ad25d80ce6dff6ef720",
     "role": "Historical exact source manifest; paths describe original production topology.",
     "destination_sha256_at_copy": "f7cc8d84d72febb824549a65e2c26e882fbff28ed87cc950da8c329468699659",
     "source_sha256": "f7cc8d84d72febb824549a65e2c26e882fbff28ed87cc950da8c329468699659",
@@ -606,10 +606,10 @@
     "historical_operation": "copy_exact",
     "pre_publication_execution_sha256": "f7cc8d84d72febb824549a65e2c26e882fbff28ed87cc950da8c329468699659",
     "pre_publication_execution_bytes": 1689,
-    "publication_sha256": "3c1114586820b26b15a1257fe99a238281d66ebd60758c12fe8220b958e8647e",
+    "publication_sha256": "5fc9ee0a6673fe91cb09ca3001f12dfcc4393cb7a9e28ad25d80ce6dff6ef720",
     "publication_adaptation": "path_labels_execution_display_or_provenance_description",
     "paper_destination": "benchmarks/frozen_runtime/provenance/production_source_manifest.sha256",
-    "package_sha256": "3c1114586820b26b15a1257fe99a238281d66ebd60758c12fe8220b958e8647e"
+    "package_sha256": "5fc9ee0a6673fe91cb09ca3001f12dfcc4393cb7a9e28ad25d80ce6dff6ef720"
   },
   {
     "source": "analysis_workspace/benchmarks/chronoclone_method_noise_benchmark_day0_locked_20260812/results/provenance/postprocessing_source_manifest.sha256",

@@ -3,8 +3,8 @@
   "status": "passed",
   "environment": {
     "name": "chronoclone",
-    "path": "/Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone",
-    "interpreter": "/Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone/bin/python",
+    "path": "/path/to/ChronoClone/.runtime/chronoclone",
+    "interpreter": "/path/to/ChronoClone/.runtime/chronoclone/bin/python",
     "kernel": "chronoclone-paper",
     "python": "3.11.15",
     "versions": {

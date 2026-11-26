@@ -10,7 +10,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PROJECT_ROOT = Path("/Users/HiroMacBook/Documents/ChronoClone")
+PROJECT_ROOT = Path("/path/to/ChronoClone")
 SOURCE = PROJECT_ROOT / "analysis_workspace/analyses/native_method_noise_benchmark_local_20260803"
 SOURCE_SCRIPTS = SOURCE / "benchmark_package/scripts"
 SOURCE_SITE_PACKAGES = SOURCE / "runtime/site-packages"

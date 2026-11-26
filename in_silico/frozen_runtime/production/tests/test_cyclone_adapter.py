@@ -2,7 +2,7 @@
 
 Run with the locked MacBook environment::
 
-    /Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone/bin/python \
+    /path/to/ChronoClone/.runtime/chronoclone/bin/python \
       -m unittest -v tests/test_cyclone_adapter.py
 """
 

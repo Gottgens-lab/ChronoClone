@@ -46,7 +46,7 @@ SOURCE_CORE = SOURCE_ROOT / "benchmark_package" / "scripts" / "benchmark_core.py
 SOURCE_ENVIRONMENT_MANIFEST = SOURCE_ROOT / "results" / "provenance" / "environment_manifest.json"
 REFERENCE_PROFILE = ROOT / "reference" / "deterministic_profiles.csv"
 REFERENCE_MANIFEST = ROOT / "reference" / "program_manifest.csv"
-PYTHON = Path("/Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone/bin/python")
+PYTHON = Path("/path/to/ChronoClone/.runtime/chronoclone/bin/python")
 SOURCE_SITE_PACKAGES = SOURCE_ROOT / "runtime" / "site-packages"
 SOURCE_SCRIPTS = SOURCE_ROOT / "benchmark_package" / "scripts"
 

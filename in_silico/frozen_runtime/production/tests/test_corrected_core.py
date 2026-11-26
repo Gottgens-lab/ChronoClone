@@ -2,7 +2,7 @@
 
 Run with the locked project environment, without adding test dependencies:
 
-    /Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone/bin/python \
+    /path/to/ChronoClone/.runtime/chronoclone/bin/python \
       -m unittest -v tests/test_corrected_core.py
 """
 

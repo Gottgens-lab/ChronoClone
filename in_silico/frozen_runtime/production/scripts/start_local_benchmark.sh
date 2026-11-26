@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT="/Users/HiroMacBook/Documents/ChronoClone/analysis_workspace/analyses/chronoclone_method_noise_benchmark_day0_locked_20260812"
-PYTHON="/Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone/bin/python"
+ROOT="/path/to/ChronoClone/analysis_workspace/analyses/chronoclone_method_noise_benchmark_day0_locked_20260812"
+PYTHON="/path/to/ChronoClone/.runtime/chronoclone/bin/python"
 PID_FILE="$ROOT/results/controller.pid"
 STATE_FILE="$ROOT/results/controller_state.json"
 SESSION="cc_day0_locked_20260812"

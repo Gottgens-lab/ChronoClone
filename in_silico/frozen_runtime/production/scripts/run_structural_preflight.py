@@ -139,11 +139,11 @@ def main() -> int:
         "status": "pass",
         "completed_at_utc": datetime.now(timezone.utc).isoformat(),
         "environment_name": "chronoclone",
-        "environment_path": "/Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone",
+        "environment_path": "/path/to/ChronoClone/.runtime/chronoclone",
         "kernel": "chronoclone",
         "python_version": platform.python_version(),
         "execution_command": (
-            "/Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone/bin/python "
+            "/path/to/ChronoClone/.runtime/chronoclone/bin/python "
             "scripts/run_structural_preflight.py"
         ),
         "sentinel_repeats": REPEATS,

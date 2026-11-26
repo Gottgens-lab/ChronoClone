@@ -54,11 +54,11 @@ assert ROOT.name == "chronoclone_method_noise_benchmark_day0_locked_20260812"
 ENVIRONMENT = {
     "manager": "micromamba (existing prefix reused without mutation)",
     "name": "chronoclone",
-    "path": "/Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone",
+    "path": "/path/to/ChronoClone/.runtime/chronoclone",
     "kernel": "chronoclone",
     "python": sys.version.split()[0],
     "execution_command": (
-        "/Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone/bin/python "
+        "/path/to/ChronoClone/.runtime/chronoclone/bin/python "
         "scripts/execute_notebook.py notebooks/0004_cyclone_applicability_diagnostic.ipynb"
     ),
 }

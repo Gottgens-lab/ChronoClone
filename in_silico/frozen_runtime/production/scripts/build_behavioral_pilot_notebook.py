@@ -23,10 +23,10 @@ def main() -> int:
         "language_info": {"name": "python", "version": "3.11.15"},
         "execution": {
             "environment_name": "chronoclone",
-            "environment_path": "/Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone",
+            "environment_path": "/path/to/ChronoClone/.runtime/chronoclone",
             "kernel": "chronoclone",
             "command": (
-                "/Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone/bin/python "
+                "/path/to/ChronoClone/.runtime/chronoclone/bin/python "
                 "scripts/execute_notebook.py notebooks/0002_day0_locked_behavioral_pilot.ipynb"
             ),
             "status": "not_executed",
@@ -45,10 +45,10 @@ def main() -> int:
             "ROOT = Path.cwd().resolve()\n"
             "ENVIRONMENT = {\n"
             " 'name': 'chronoclone',\n"
-            " 'path': '/Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone',\n"
+            " 'path': '/path/to/ChronoClone/.runtime/chronoclone',\n"
             " 'kernel': 'chronoclone',\n"
             " 'python': platform.python_version(),\n"
-            " 'execution_command': '/Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone/bin/python scripts/execute_notebook.py notebooks/0002_day0_locked_behavioral_pilot.ipynb',\n"
+            " 'execution_command': '/path/to/ChronoClone/.runtime/chronoclone/bin/python scripts/execute_notebook.py notebooks/0002_day0_locked_behavioral_pilot.ipynb',\n"
             "}\n"
             "assert ENVIRONMENT['python'] == '3.11.15'\n"
             "ENVIRONMENT"
@@ -94,7 +94,7 @@ def main() -> int:
         ),
         nbf.v4.new_code_cell(
             "test_command = [\n"
-            " '/Users/HiroMacBook/Documents/ChronoClone/.runtime/chronoclone/bin/python',\n"
+            " '/path/to/ChronoClone/.runtime/chronoclone/bin/python',\n"
             " '-m','unittest','-v','tests/test_cyclone_adapter.py'\n"
             "]\n"
             "test = subprocess.run(test_command, cwd=ROOT, capture_output=True, text=True, check=False)\n"
